@@ -1,0 +1,1079 @@
+/* CONTAINER / ANIMATIONS / BREADCRUMB / INPUTS / BUTTONS / ALERT / TABLE / CARDS / INFO BOX / POSTER */
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / CONTAINER */
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container-sm,
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1320px;
+    }
+}
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / ANIMATIONS */
+
+
+/* ROTATE */
+
+.rotate {
+    transition: all 0.5s ease;
+}
+
+.rotate:hover {
+    transform: rotate(180deg);
+}
+
+
+/* SHAKE */
+
+.shake:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+
+/* ZOOM */
+
+.zoom,
+.re-zoom {
+    transition: transform .2s;
+    /* Animation */
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.re-zoom:hover {
+    transform: scale(0.66);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / BREADCRUMB */
+
+ul.breadcrumb {
+    padding: 0 10px;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 5px;
+    color: black;
+    font-weight: 600;
+    content: "≻\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #0275d8 !important;
+    opacity: 1;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / INPUTS */
+
+input,
+.input {
+    width: 100%;
+    margin-bottom: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 0.25em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    overflow: visible;
+}
+
+textarea {
+    width: 100% !important;
+}
+
+label {
+    display: inline-block;
+    line-height: 30px;
+    margin: 8px 0;
+}
+
+.input-label {
+    width: 100%;
+    margin: 8px 0;
+    display: inline-block;
+    padding: 0.5em 1em;
+    overflow: visible;
+}
+
+
+/*
+input[type=search] {
+    background-image: url(../img/Icons/search.png);
+    background-position: 0.5em 0.15em;
+    background-size: 2em;
+    background-repeat: no-repeat;
+    padding-left: 3em;
+}*/
+
+input[type=file],
+input[type=range] {
+    box-shadow: none;
+    border: none;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-shadow: none;
+    border: none;
+    width: 1em;
+    height: 1em;
+    margin-right: 1em;
+}
+
+input[type=color] {
+    padding: 0;
+    height: 25px;
+    width: 25px;
+}
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / GENERAL BUTTON */
+
+.btn,
+.badge {
+    display: inline-block;
+    color: var(--c-dark);
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    background-color: var(--c-gray-500);
+}
+
+.btn {
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375em 0.75em;
+    font-size: 1em;
+    margin: 0.2em;
+    border-radius: 0.25em;
+    transition: all 0.15s ease;
+}
+
+.btn-lg {
+    padding: 0.375em 0.75em;
+    font-size: 1.25em;
+}
+
+.btn-sm {
+    padding: 0.275em 0.6em;
+    font-size: 0.875em;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+
+/* BADGE */
+
+.badge {
+    padding: 4px 8px;
+    margin: 2px;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    border-radius: 0.25rem;
+}
+
+.badge:empty {
+    display: none;
+}
+
+
+/* TOOLTIP */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 75px;
+    font-size: 12px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 95%;
+    margin-left: -50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* TOOLS */
+
+.tools {
+    width: 140px;
+    text-align: center;
+}
+
+.tools a {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tools a i {
+    color: var(--color-dark);
+    width: 25px;
+    line-height: 25px;
+    font-size: 0.8em;
+    border-radius: 50%;
+}
+
+
+/* RADIO BUTTON */
+
+
+/*
+  <label class="switch">
+    <input type="checkbox" unchecked>
+    <span class="slider br-5"></span>
+  </label>
+*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-red);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    top: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--color-green);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.slider:before {
+    border-radius: 50%;
+}
+
+
+/* BilirArsiv / op-tools */
+
+.op-tools {
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 1em;
+}
+
+.card .op-tools {
+    font-size: 1.2em;
+}
+
+.card .op-tools i {
+    margin-left: 5px;
+}
+
+.op-tools i {
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+    line-height: 30px;
+    color: black;
+    opacity: .2;
+}
+
+.op-tools i:hover {
+    opacity: .75;
+}
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / ALERT */
+
+.alert {
+    /* position: relative; */
+    /* display: fixed; */
+    /* padding: 0.8em 1.2em; */
+    border-radius: 0.5em;
+    color: var(--color-white);
+    transition: all .5s ease;
+}
+
+.alert .alert-header {
+    position: relative;
+    padding: 5px 90px 5px 20px;
+}
+
+.alert .alert-header .title {
+    position: relative;
+    width: 100%;
+    font-size: 1.5em;
+    margin: 5px 0;
+    /* line-height: 2em; */
+}
+
+.alert .alert-content {
+    text-align: justify;
+    padding: 0 20px 10px 30px;
+}
+
+.alert.mini .alert-content {
+    display: none;
+}
+
+.alert .alert-header .title i {
+    padding-right: 10px;
+}
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / TABLE */
+
+table {
+    caption-side: bottom;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+}
+
+tr th:first-child,
+tr th:last-child,
+tr td:first-child,
+tr td:last-child {
+    padding-left: 15px;
+}
+
+tbody,
+td,
+th,
+thead,
+tr {
+    border-color: inherit;
+    border-style: solid;
+    vertical-align: middle;
+    border-width: 0;
+}
+
+.table {
+    position: relative !important;
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    color: #212529;
+    -webkit-overflow-scrolling: touch;
+    vertical-align: top;
+    border-color: #dee2e6;
+    border-radius: 0.5em;
+}
+
+.card table,
+.card .table {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card-body .table thead,
+.card-body .table thead tr {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.table> :not(caption)>*>* {
+    padding: 11px 5px;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+.table> :not(:last-child)> :last-child>* {
+    border-bottom-color: currentColor;
+}
+
+
+/* TABLE HOVER */
+
+.table-hover>tbody>tr:hover {
+    --bs-table-accent-bg: var(--bs-table-hover-bg);
+    color: var(--bs-table-hover-color);
+}
+
+
+/* TABLE STRIPED */
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: var(--bs-table-striped-bg);
+    color: var(--bs-table-striped-color);
+}
+
+
+/* TABLE DARK */
+
+.table-dark {
+    --bs-table-bg: #212529;
+    --bs-table-striped-bg: #2c3034;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #323539;
+    --bs-table-hover-color: #fff;
+    color: #fff;
+    border-color: #373b3e;
+}
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / CARDS */
+
+.card,
+.usercard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: calc(0.5em + 2px);
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+}
+
+.card-header {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.card-footer {
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.card.mini .card-body,
+.card.mini .card-footer {
+    display: none;
+}
+
+.card .card-body,
+.usercard .card-body {
+    flex: 1 1 auto;
+    padding: 1em 1em;
+}
+
+.card .card-title,
+.usercard .card-title {
+    font-size: 1.5em;
+    margin: 5px 0;
+}
+
+.card .card-text:last-child,
+.usercard .card-text:last-child {
+    margin-bottom: 0;
+}
+
+.card .card-header,
+.usercard .card-header {
+    position: relative;
+    padding: 5px 10px;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(156, 90, 90, 0.125);
+}
+
+.usercard .card-header {
+    padding: 5px 10px;
+}
+
+.card .card-header {
+    padding: 5px 90px 5px 20px;
+}
+
+.card .card-footer,
+.usercard .card-footer {
+    padding: 0.5em 1em;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+
+/* TAB CARD */
+
+.card-tab {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: 0;
+    background-clip: border-box;
+    border-radius: .25rem;
+}
+
+.card-tab .card-header {
+    color: var(--color-white);
+    background-color: transparent !important;
+    border-bottom: 2px solid var(--c-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.card-tab .card-header .card-title {
+    padding: 0.75em 1em;
+    margin: 0 0 -2px 0;
+    background: var(--c-dark);
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.card-tab .card-header .card-title i {
+    margin-right: 10px;
+}
+
+.card-tab .card-header .card-info {
+    float: right;
+    margin-right: 1em;
+}
+
+.card-tab .card-header .card-info i {
+    font-size: 1.3em;
+    opacity: 0.7;
+}
+
+.card-tab .card-body {
+    padding: 1em;
+    color: var(--color-dark);
+    border: 2px solid var(--c-dark);
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+
+/* STORIES */
+
+.stories {
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.stories::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+.stories::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.stories::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    background: #131619;
+}
+
+.stories .story-item {
+    position: relative;
+    width: 120px;
+    height: 150px;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.stories .story-item .story-item-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--color-danger);
+}
+
+.stories .story-item .story-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid transparent;
+}
+
+.stories .story-item .story-item-date {
+    position: absolute;
+    width: 65px;
+    top: 83px;
+    left: calc(50% - 32.5px);
+    border-radius: 0.5em;
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+
+.stories .story-item .story-item-title {
+    overflow: hidden;
+    color: var(--color-dark);
+}
+
+.stories .story-item:hover .story-item-title {
+    color: var(--color-danger);
+}
+
+
+/* USER CARD */
+
+.usercard .card-header {
+    background-color: #fff;
+    border-bottom: 0;
+}
+
+.usercard .card-body {
+    flex: 1 1 auto;
+    padding: 1em 1em;
+    color: #6c757d;
+}
+
+.usercard .card-body p {
+    margin-bottom: 0.75em;
+}
+
+.usercard .card-content {
+    float: left;
+    width: calc(100% - 125px);
+}
+
+.usercard .card-item i {
+    text-align: center;
+    width: 3em;
+}
+
+.user-img-sm,
+.user-img-md,
+.user-img-lg {
+    border: 3px solid #adb5bd;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-img-sm {
+    height: 50px;
+    width: 50px;
+}
+
+.user-img-md {
+    height: 125px;
+    width: 125px;
+}
+
+.user-img-lg {
+    height: 200px;
+    width: 200px;
+}
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / INFO BOX */
+
+.info-box {
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    border-radius: .25em;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #fff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.75em;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.info-box .info-box-icon {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    min-width: 4em;
+    border-radius: .25em;
+    margin-right: 1em;
+}
+
+.info-box .info-box-icon i {
+    font-size: 2em;
+}
+
+.info-box .info-box-content {
+    width: 100%;
+}
+
+.info-box .info-box-content .info-box-number {
+    font-weight: 700;
+}
+
+.info-box .info-box-content .info-box-text,
+.info-box .info-box-content .info-box-number {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0.7em 0;
+}
+
+.info-box .info-box-content .progress {
+    border-radius: 0.25em;
+    background: grey;
+    height: 0.15em;
+    margin: 0.25em 0;
+}
+
+.info-box .info-box-content .progress .bar {
+    border-radius: 0.25em;
+    background: white;
+    height: 100%;
+}
+
+.small-box {
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    border-radius: .25em;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.75em;
+    position: relative;
+    width: 100%;
+}
+
+.small-box .small-box-body {
+    width: 100%;
+    padding-bottom: 25px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.small-box .small-box-body h3 {
+    font-size: 2em;
+}
+
+.small-box .small-box-body h3,
+.small-box .small-box-body p {
+    margin: 0;
+    padding-bottom: 0.75em;
+}
+
+.small-box .small-box-body .small-box-icon {
+    position: absolute;
+    color: rgba(0, 0, 0, .15);
+    top: 15px;
+    right: 15px;
+}
+
+.small-box .small-box-body .small-box-icon i {
+    font-size: 70px;
+}
+
+.small-box .small-box-footer {
+    position: absolute;
+    align-items: center;
+    background: rgba(0, 0, 0, .15);
+    border-radius: .25em;
+    padding: 0.4em;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* ==================================================================================================== */
+
+
+/* BilirArsiv / hdfilmcehennemi - POSTER */
+
+.poster {
+    position: relative;
+    overflow: hidden;
+}
+
+.poster a {
+    display: block;
+    color: var(--color-white);
+}
+
+.poster a:hover .poster-cover {
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.poster a:hover .poster-play {
+    opacity: 1
+}
+
+.poster a img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.poster a:hover img {
+    filter: blur(4px)
+}
+
+.poster .poster-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .1s linear;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 44%, rgba(0, 0, 0, 0.85) 95%, black 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 44%, rgba(0, 0, 0, 0.85) 95%, black 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 44%, rgba(0, 0, 0, 0.85) 95%, black 100%);
+}
+
+.poster .poster-cover .poster-play {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: .2s linear;
+    z-index: 1;
+    flex: 1;
+}
+
+.poster .poster-cover .poster-play .poster-desc {
+    margin: 0 10px 10px 10px;
+    text-align: center;
+    color: whitesmoke;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    line-height: 1.2
+}
+
+.poster .poster-cover .poster-play .poster-tag {
+    margin: 10px;
+    text-align: center
+}
+
+.poster .poster-cover .poster-info .poster-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.poster .poster-cover .poster-info .title {
+    line-height: 2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-white);
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.poster .poster-cover .poster-info .poster-meta .poster-year {
+    color: whitesmoke;
+}
+
+.poster .poster-cover .poster-info .poster-meta .poster-Ã„Â±mdb {
+    color: #ada26c;
+    font-size: 0.75em;
+    font-weight: 600;
+}
+
+.poster .poster-cover .poster-info .poster-lang {
+    display: block;
+    font-size: 0.75em;
+    color: whitesmoke;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.poster .poster-cover .poster-info .poster-lang i {
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 0.5em;
+}
+
+
+/* ==================================================================================================== */
